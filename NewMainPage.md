@@ -7,4 +7,4 @@ This game is made in C#, so don't expect it to be harmful :P
 
 #Download
 
-cilkre can be downloaded [right here](https://HIHIQY1.github.io).
+cilkre can be downloaded [right here](https://HIHIQY1.github.io/cilkre).
