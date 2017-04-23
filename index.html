@@ -2,7 +2,8 @@
 <html>
 <head>
 <script>
-if (screen.width < 1000) {
+window.onload = function onLoad() {
+if (screen.width < 800) {
 alert('Screen size is smaller than 800px.\nRedirecting.');
 window.location.replace("m_main.html");
 }
