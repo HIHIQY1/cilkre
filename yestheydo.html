@@ -69,8 +69,10 @@ font-size:40px
 
 <script>
 function checkAllowCookie() {
-if (document.cookie.indexOf("allowCookie") == 1) {
+if (document.cookie.indexOf("allowCookie") == -1) {
 // Riemoef dinges
+}
+else {
 alert("aksept");
 document.getElementById("bottom-container").style.visibility="hidden";
 }
@@ -78,7 +80,7 @@ document.getElementById("bottom-container").style.visibility="hidden";
 
 function allowCookies() {
 var date = new Date();
-date.setTime(date.getTime() + (10*60*60*1000));
+date.setTime(date.getTime() + (7*60*60*24*1000));
 var expires = "expires=" + date.toUTCString();
 document.cookie = "allowCookie" + "=" + 1 + ";" + expires + ";";
 document.getElementById("bottom-container").style.visibility="hidden";
