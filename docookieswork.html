@@ -78,8 +78,8 @@ document.getElementById("bottom-container").style.visibility="hidden";
 
 function allowCookies() {
 var date = new Date();
-date.setTime(date.getTime() + (10*60*60*24*1000));
-var expires = "expires=" + date.toGMTString();
+date.setTime(date.getTime() + (10*60*60*1000));
+var expires = "expires=" + date.toUTCString();
 document.cookie = "allowCookie" + "=" + 1 + ";" + expires + ";";
 document.getElementById("bottom-container").style.visibility="hidden";
 }
