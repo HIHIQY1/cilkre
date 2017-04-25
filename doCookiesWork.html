@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cilkre - Welcome</title>
+<link rel="icon" href="https://HIHIQY1.github.io/cilkre/cilkre%20Logo.ico">
+</head>
+
+<style>
+#logo {
+transition: transform 1s;
+/*animation-name: logoanim;*/
+/*animation: logoanim 6s ease-in-out 0s infinite normal;*/
+}
+
+#logo:active {
+transform: translateY(-1000%);
+}
+
+/* All buttons styling */
+.btn {
+background-color: lightgreen;
+font-size: 30px;
+border: 2px solid lightgreen;
+border-radius: 10px;
+transition-duration: 0.6s;
+cursor: pointer;
+font-family: "Arial";
+}
+
+.btn:hover {
+background-color: transparent;
+padding: 1% 2.5%;
+}
+
+/*.btn:active {
+transition-duration: 0s;
+transform: translateY(10px);
+}*/
+
+/* Paragraph 1 styling */
+#p1 {
+border: 4px solid black;
+border-radius: 10px;
+padding: 10px 0px;
+transition-duration: 1.5s;
+width: 50%;
+font-family: "Arial";
+}
+
+#p1:hover {
+background-color: rgb(220, 220, 220);
+border-radius: 15%;
+padding: 8% 0px;
+font-size: 150%;
+}
+
+#p1span1 {
+font-size:40px
+}
+
+#bottom-container {
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 95%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+  }
+</style>
+
+<script>
+function checkAllowCookie() {
+if (document.cookie.indexOf("allowCookie") == 1) {
+// Riemoef dinges
+alert("aksept");
+document.getElementById("bottom-container").style.visibility="hidden";
+}
+}
+
+function allowCookies() {
+var date = new Date();
+date.setTime(date.getTime() + (10*60*60*24*1000));
+var expires = "expires=" + date.toGMTString();
+document.cookie = "allowCookie" + "=" + 1 + ";" + expires + ";";
+document.getElementById("bottom-container").style.visibility="hidden";
+}
+</script>
+
+<body onload="checkAllowCookie()">
+<center>
+<span><p style="font-family:'Arial';font-size:50px;margin: -10px 0px;" id="title"><b>cilkre<br></b>
+<img src="https://HIHIQY1.github.io/cilkre/cilkre%20Logo.ico" width="64" height="64" id="logo" ><br>
+<p style="color:gray;font-family:'Arial';font-size:15px;line-height:0px;">Made by HIHIQY1</p></p></span>
+<hr>
+
+<input type=button onClick="location.href='main.html'" value="Home" class="btn">
+<input type=button onClick="location.href='cilkredownloadpage.html'" value="Downloads" class="btn">
+<input type=button onClick="location.href='about.html'" value="About" class="btn">
+<!--
+<br>
+<button>Home</button>
+<button>Tech</button>
+<button>Download</button>
+-->
+<p id="p1"><span id="p1span1">Welcome</span><br>
+<span id="p1span2">Welcome to the cilkre site!<br>Here you can download cilkre,<br>
+or search up some information.<br>(Which you can find at the about page)<br>You can also go away, if you want.<br>
+(Which is not necessary :P )</span><br>
+<span id="p1span3"><br>Use the above buttons to navigate through this site.</span>
+</p>
+<div id="bottom-container">
+<div id="bottom-mobilemsg"><a href="m_main.html">Mobile version</a></div>
+<div id="bottom-cookiemsg">Please accept cookies, for a better website experience.
+<input type=button onClick="allowCookies()" value="Accept" id="allowCookiesButton">
+</div>
+</div>
+</center>
+</body>
+</html>
