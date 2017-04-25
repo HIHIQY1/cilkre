@@ -6,6 +6,10 @@
 </head>
 
 <style>
+body * {
+font-family: Arial;
+}
+
 .btn {
 background-color: lightgreen;
 font-size: 30px;
@@ -41,10 +45,72 @@ font-size: 150%;
 #p1span1 {
 font-size:40px
 }
+
+
+#bottom {
+    width: 105%;
+    overflow: hidden;
+    background-color: rgba(80, 80, 80, .8);
+    position: fixed;
+    bottom: 0;
+    margin: 0 -2.5%;
+    padding: .5% 0;
+    text-align: center;
+}
+
+#bottom-cookiemsg {
+color: white;
+font-size: 20px;
+}
+#cookieAcceptButton {
+padding: .5% 2%;
+border: 2px solid lightgreen;
+border-radius: 10px;
+background-color: lightgreen;
+transition: .5s;
+cursor: pointer;
+}
+#cookieAcceptButton:hover {
+background-color: transparent;
+padding: .5% 2.5%;
+}
+
+#mobileversionlink {
+font-size: 20px;
+color: white;
+}
 </style>
 
-<body>
-<center>
+<script>
+function checkAllowCookie() {
+if (document.cookie.indexOf("allowCookie") == -1) {
+}
+else {
+document.getElementById("bottom-cookiemsg").innerHTML="";
+}
+}
+
+function allowCookies(cookiename) {
+var date = new Date();
+date.setTime(date.getTime() + (7*60*60*24*1000));
+var expires = "expires=" + date.toUTCString();
+document.cookie = cookiename + "=" + 1 + ";" + expires + ";";
+document.getElementById("bottom-cookiemsg").innerHTML="";
+}
+</script>
+
+<body onload="checkAllowCookie()">
+
+<div id="bottom">
+<div id="bottom-versionmsg">
+<a href="m_about.html" id="mobileversionlink">Mobile version</a>
+</div>
+<div id="bottom-cookiemsg">
+Please accept cookies, for a better website experience: <input type=button
+id="cookieAcceptButton" onClick="allowCookies('allowCookie')" value="Accept">
+</div>
+</div>
+
 <center>
 <span><p style="font-family:'Arial';font-size:50px;margin: -10px 0px;" id="title"><b>cilkre<br></b>
 <img src="https://HIHIQY1.github.io/cilkre/cilkreStartup%20Logo.ico" width="64" height="64" id="logo" ><br>
