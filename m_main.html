@@ -3,93 +3,22 @@
 <head>
 <title>cilkre - Welcome</title>
 <link rel="icon" href="https://HIHIQY1.github.io/cilkre/cilkre%20Logo.ico">
+<link rel="stylesheet" type="text/css" href="m_style.css">
+<script type="text/javascript" src="cookies.js"></script>
 
 <meta name="keywords" content="cilkre, HIHIQY1, C#, game, boring, HIHIQY2">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 
 <style>
-body * {
-font-family: Arial;
-}
-
-/* All buttons styling */
-.btn {
-background-color: lightgreen;
-font-size: 25px;
-border: 2px solid lightgreen;
-border-radius: 10px;
-cursor: pointer;
-font-family: "Arial";
-}
-
 /* Paragraph 1 styling */
 #p1 {
 background-color: rgb(220, 220, 220);
-border: 4px solid black;
 border-radius: 15%;
 padding: 10px 0px;
-width: 90%;
-font-family: "Arial";
-font-size: 30px;
-}
-
-#p1span1 {
-font-size: 60px;
-}
-#p1span2 {
-font-size: 27px;
-}
-
-
-#bottom {
-    width: 105%;
-    overflow: hidden;
-    background-color: rgba(80, 80, 80, .8);
-    position: fixed;
-    bottom: 0;
-    margin: 0 -2.5%;
-    padding: 2% 0;
-    text-align: center;
-}
-
-#bottom-cookiemsg {
-color: white;
-font-size: 17px;
-}
-#cookieAcceptButton {
-padding: .5% 2%;
-border: 2px solid lightgreen;
-border-radius: 10px;
-background-color: lightgreen;
-transition: .5s;
-cursor: pointer;
-font-size: 15px;
-}
-
-#desktopversionlink {
-font-size: 20px;
-color: white;
 }
 </style>
 
-<script>
-function checkAllowCookie() {
-if (document.cookie.indexOf("allowCookie") == -1) {
-}
-else {
-document.getElementById("bottom-cookiemsg").innerHTML="";
-}
-}
-
-function allowCookies(cookiename) {
-var date = new Date();
-date.setTime(date.getTime() + (7*60*60*24*1000));
-var expires = "expires=" + date.toUTCString();
-document.cookie = cookiename + "=" + 1 + ";" + expires + ";";
-document.getElementById("bottom-cookiemsg").innerHTML="";
-}
-</script>
 
 <body onload="checkAllowCookie()">
 

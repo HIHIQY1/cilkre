@@ -3,13 +3,14 @@
 <head>
 <title>cilkre - Welcome</title>
 <link rel="icon" href="https://HIHIQY1.github.io/cilkre/cilkre%20Logo.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="cookies.js"></script>
+
+<meta name="keywords" content="cilkre, HIHIQY1, C#, game, boring, HIHIQY2">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <style>
-body * {
-font-family: Arial;
-}
-
 #logo {
 transition: transform 1s;
 /*animation-name: logoanim;*/
@@ -20,46 +21,8 @@ transition: transform 1s;
 transform: translateY(-1000%);
 }
 
-/* All buttons styling */
-.btn {
-background-color: lightgreen;
-font-size: 30px;
-border: 2px solid lightgreen;
-border-radius: 10px;
-transition-duration: 0.6s;
-cursor: pointer;
-font-family: "Arial";
-}
-
-.btn:hover {
-background-color: transparent;
-padding: 1% 2.5%;
-}
-
-/*.btn:active {
-transition-duration: 0s;
-transform: translateY(10px);
-}*/
-
-/* Paragraph 1 styling */
-#p1 {
-border: 4px solid black;
-border-radius: 10px;
-padding: 10px 0px;
-transition-duration: 1.5s;
-width: 50%;
-font-family: "Arial";
-}
-
 #p1:hover {
 background-color: rgb(220, 220, 220);
-border-radius: 15%;
-padding: 8% 0px;
-font-size: 150%;
-}
-
-#p1span1 {
-font-size:40px
 }
 
 /*
@@ -80,59 +43,7 @@ font-size:40px
 #bottom-container * {
 font-size: 20px;
 }*/
-
-
-#bottom {
-    width: 105%;
-    overflow: hidden;
-    background-color: rgba(80, 80, 80, .8);
-    position: fixed;
-    bottom: 0;
-    margin: 0 -2.5%;
-    padding: .5% 0;
-    text-align: center;
-}
-
-#bottom-cookiemsg {
-color: white;
-font-size: 20px;
-}
-#cookieAcceptButton {
-padding: .5% 2%;
-border: 2px solid lightgreen;
-border-radius: 10px;
-background-color: lightgreen;
-transition: .5s;
-cursor: pointer;
-}
-#cookieAcceptButton:hover {
-background-color: transparent;
-padding: .5% 2.5%;
-}
-
-#mobileversionlink {
-font-size: 20px;
-color: white;
-}
 </style>
-
-<script>
-function checkAllowCookie() {
-if (document.cookie.indexOf("allowCookie") == -1) {
-}
-else {
-document.getElementById("bottom-cookiemsg").innerHTML="";
-}
-}
-
-function allowCookies(cookiename) {
-var date = new Date();
-date.setTime(date.getTime() + (7*60*60*24*1000));
-var expires = "expires=" + date.toUTCString();
-document.cookie = cookiename + "=" + 1 + ";" + expires + ";";
-document.getElementById("bottom-cookiemsg").innerHTML="";
-}
-</script>
 
 <body onload="checkAllowCookie()">
 
